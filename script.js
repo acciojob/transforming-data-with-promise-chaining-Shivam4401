@@ -6,7 +6,9 @@ document.getElementById("btn").addEventListener("click",function(){
 
 const initialPromise = new Promise ((resolve,reject) => {
    
-	   resolve(n);
+	   setTimeout(()=>{
+		   resolve(n);
+	   },2000);
    
 });
 

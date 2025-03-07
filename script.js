@@ -2,7 +2,7 @@ document.getElementById("btn").addEventListener("click",function(){
 	
 	const n = parseFloat(document.querySelector("#ip").value);
 	let outputDiv = document.getElementById("output");
-	// outputDiv.textContent = "";
+	outputDiv.textContent = "";
 
 const initialPromise = new Promise ((resolve,reject) => {
    

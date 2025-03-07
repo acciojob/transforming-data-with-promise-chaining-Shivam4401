@@ -1,8 +1,8 @@
-document.getElementById("btn").addEventListener("click",function(e){
-	e.preventDefault();
+document.getElementById("btn").addEventListener("click",function(){
+	
 	const n = parseFloat(document.querySelector("#ip").value);
 	let outputDiv = document.getElementById("output");
-	outputDiv.textContent = "";
+	// outputDiv.textContent = "";
 
 const initialPromise = new Promise ((resolve,reject) => {
    
@@ -49,7 +49,7 @@ initialPromise
 })
 .then((divide)=>{
 	let add = divide+10;
-	outputDiv.textContent = `Result: ${add}`;
+	outputDiv.textContent = `Final Result: ${add}`;
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(add);

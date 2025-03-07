@@ -1,6 +1,8 @@
 document.getElementById("btn").addEventListener("click",function(e){
 	e.preventDefault();
-	const n = parseInt(document.querySelector("#ip").value);
+	const n = parseFloat(document.querySelector("#ip").value);
+	let outputDiv = document.getElementById("output");
+	outputDiv.textContent = "";
 
 const initialPromise = new Promise ((resolve,reject) => {
    
@@ -11,7 +13,7 @@ const initialPromise = new Promise ((resolve,reject) => {
 initialPromise
 .then((n)=>{
 	let number = n;
-	document.querySelector("#output").textContent = `Result: ${number}`;
+	outputDiv.textContent= `Result: ${number}`;
 	return new Promise ((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(number);
@@ -20,7 +22,7 @@ initialPromise
 })
 .then((number) => {
 	let multiply = number*2;
-	document.querySelector("#output").textContent = `Result: ${multiply}`;
+	outputDiv.textContent = `Result: ${multiply}`;
 	return new Promise ((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(multiply);
@@ -29,7 +31,7 @@ initialPromise
 })
 .then((multiply)=>{
 	let sub = multiply-3;
-	document.querySelector("#output").textContent = `Result: ${sub}`;
+	outputDiv.textContent = `Result: ${sub}`;
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(sub);
@@ -38,7 +40,7 @@ initialPromise
 })
 .then((sub)=>{
 	let divide = sub/2;
-	document.querySelector("#output").textContent = `Result: ${divide}`;
+	outputDiv.textContent = `Result: ${divide}`;
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(divide);
@@ -47,7 +49,7 @@ initialPromise
 })
 .then((divide)=>{
 	let add = divide+10;
-	document.querySelector("#output").textContent = `Result: ${add}`;
+	outputDiv.textContent = `Result: ${add}`;
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(add);

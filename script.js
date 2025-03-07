@@ -11,7 +11,7 @@ const initialPromise = new Promise ((resolve,reject) => {
 initialPromise
 .then((n)=>{
 	let number = n;
-	document.querySelector("#output").textContent = number;
+	document.querySelector("#output").textContent = `Result: ${number}`;
 	return new Promise ((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(number);
@@ -20,7 +20,7 @@ initialPromise
 })
 .then((number) => {
 	let multiply = number*2;
-	document.querySelector("#output").textContent = multiply;
+	document.querySelector("#output").textContent = `Result: ${multiply}`;
 	return new Promise ((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(multiply);
@@ -29,7 +29,7 @@ initialPromise
 })
 .then((multiply)=>{
 	let sub = multiply-3;
-	document.querySelector("#output").textContent = sub;
+	document.querySelector("#output").textContent = `Result: ${sub}`;
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(sub);
@@ -38,7 +38,7 @@ initialPromise
 })
 .then((sub)=>{
 	let divide = sub/2;
-	document.querySelector("#output").textContent = divide;
+	document.querySelector("#output").textContent = `Result: ${divide}`;
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(divide);
@@ -47,7 +47,7 @@ initialPromise
 })
 .then((divide)=>{
 	let add = divide+10;
-	document.querySelector("#output").textContent = add;
+	document.querySelector("#output").textContent = `Result: ${add}`;
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve(add);
